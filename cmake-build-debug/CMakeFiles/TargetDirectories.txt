@@ -1,3 +1,0 @@
-D:/Users/Admin/CLionProjects/CppStart/cmake-build-debug/CMakeFiles/CppStart.dir
-D:/Users/Admin/CLionProjects/CppStart/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Users/Admin/CLionProjects/CppStart/cmake-build-debug/CMakeFiles/rebuild_cache.dir

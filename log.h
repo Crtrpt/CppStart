@@ -6,7 +6,7 @@
 #define CPPSTART_LOG_H
 
 
-#define LOGINFO(s) ( cout <<"["<<__FILE__<< ":"<<__LINE__  <<"] [" << __DATE__  <<" "<< __TIME__<<"] " << s << endl)
+#define LOG_INFO(s) ( cout <<"["<<__FILE__<< ":"<<__LINE__  <<"] [" << __DATE__  <<" "<< __TIME__<<"] " << s << endl)
 
 
 #endif //CPPSTART_LOG_H

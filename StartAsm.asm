@@ -2,7 +2,6 @@
 .XMM
 .model FLAT, C
 
-
 .code
     foo PROC
         push ebp

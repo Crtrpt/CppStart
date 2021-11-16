@@ -6,9 +6,13 @@ using namespace std;
 
 extern "C" int foo(int num, int power);
 
+extern "C" int addition(int, int);
+
 int power2( int num, int power );
 
 int main() {
+    std::cout << "call RUST"<<addition(1,2) << std::endl;
+
     std::cout <<  foo(2, 2) << std::endl;
     std::cout << power2(2,2) << std::endl;
     LOG_INFO("xxxx");

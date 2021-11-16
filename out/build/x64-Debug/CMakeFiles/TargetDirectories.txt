@@ -1,5 +1,0 @@
-C:/Users/l/CLionProjects/CppStart/out/build/x64-Debug/CMakeFiles/CppStart.dir
-C:/Users/l/CLionProjects/CppStart/out/build/x64-Debug/CMakeFiles/Server.dir
-C:/Users/l/CLionProjects/CppStart/out/build/x64-Debug/CMakeFiles/Client.dir
-C:/Users/l/CLionProjects/CppStart/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-C:/Users/l/CLionProjects/CppStart/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

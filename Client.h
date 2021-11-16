@@ -7,10 +7,11 @@
 
 #include <iostream>
 #include <cstring>
+#include "Base.h"
 
 using std::string;
 
-class Client {
+class Client:BASE {
 private:
     string name;
     int age;
@@ -20,6 +21,8 @@ public:
     __declspec(dllexport) string getName();
 
     __declspec(dllexport) int getAge() const;
+
+    string  getVersion();
 };
 
 

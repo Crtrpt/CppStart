@@ -22,5 +22,5 @@ int Server::getAge() const {
 }
 
 string Server::getVersion() {
-    return "Server v0.0.1";
+    return "0.0.1"
 }

@@ -51,3 +51,7 @@ Client::Client() {
 int Client::getAge() const {
     return this->age;
 }
+
+string Client::getVersion() {
+    return "Client v0.0.1";
+}

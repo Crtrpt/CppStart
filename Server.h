@@ -6,9 +6,10 @@
 #define C14_SERVER_H
 #include <iostream>
 #include <cstring>
+#include "Base.h"
 using std::string;
 
-class Server {
+class Server:BASE {
 private:
     string name;
     int age;
@@ -16,6 +17,7 @@ public:
     Server();
     string getName();
     int getAge() const;
+    string  getVersion() override;
 };
 
 

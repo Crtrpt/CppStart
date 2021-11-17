@@ -18,6 +18,8 @@ private:
 public:
     __declspec(dllexport) Client();
 
+    __declspec(dllexport) ~Client();
+
     __declspec(dllexport) string getName();
 
     __declspec(dllexport) int getAge() const;

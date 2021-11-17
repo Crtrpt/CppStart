@@ -5,6 +5,9 @@
 #include "Client.h"
 #include "Windows.h"
 
+#include <iostream>
+using namespace std;
+
 BOOL WINAPI DllMain(
         HINSTANCE hinstDLL,  // handle to DLL module
         DWORD fdwReason,     // reason for calling function
@@ -44,8 +47,12 @@ string Client::getName() {
 }
 
 Client::Client() {
-    this->name = "test client";
+    this->name = "init client";
     this->age = 20;
+}
+
+Client::~Client() {
+    cout << "distory client" <<endl;
 }
 
 int Client::getAge() const {

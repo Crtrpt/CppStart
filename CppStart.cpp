@@ -2,6 +2,10 @@
 #include "Server.h"
 #include "Client.h"
 #include "log.h"
+#include <csignal>
+#include <typeinfo>
+
+
 
 using namespace std;
 
@@ -27,8 +31,30 @@ extern "C" {
     int js_usage(struct js *);                                 // Return mem usage
 }
 
-int main() {
 
+template <typename T>
+inline T const& Max (T const& a, T const& b)
+{
+    const std::type_info &t=  typeid(a);
+
+    cout<< t.name()<< endl;
+    return a;
+//    return a < b ? b:a;
+}
+
+void signalHandler( int signum )
+{
+    cout << "Interrupt signal (" << signum << ") received.\n";
+
+    // 清理并关闭
+    // 终止程序
+
+    exit(signum);
+}
+
+int main() {
+    signal(SIGINT, signalHandler);
+    cout<< Max(1,2)<< std::endl;
     char mem[200];
     struct js *js = js_create(mem, sizeof(mem));  // Create JS instance
     jsval_t v = js_eval(js, "1 + 2 * 3", ~0);     // Execute JS code
@@ -49,6 +75,11 @@ int main() {
     std::cout << c->getName() << std::endl;
     std::cout << c->getAge() << std::endl;
     std::cout << c->getVersion() << std::endl;
+
+    delete c;
+    while (true){
+
+    }
     return 0;
 }
 

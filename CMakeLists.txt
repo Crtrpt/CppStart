@@ -9,12 +9,15 @@ link_directories(rust/rlib/target/i686-pc-windows-msvc/debug/)
 add_library(Server STATIC Server.cpp)
 add_library(Client SHARED Client.cpp log.h)
 
+add_library(ELK STATIC elk/elk.c)
+
 
 add_executable(CppStart CppStart.cpp StartAsm.asm)
 
 target_link_libraries(CppStart ws2_32)
 target_link_libraries(CppStart userenv)
 
+target_link_libraries(CppStart ELK)
 target_link_libraries(CppStart rlib)
 target_link_libraries(CppStart Server)
 target_link_libraries(CppStart Client)

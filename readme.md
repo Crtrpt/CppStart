@@ -1,4 +1,4 @@
-当前运行环境windows
+褰撳墠杩愯鐜windows
 ```
 rustup target add i686-pc-windows-msvc
 cargo build target=i686-pc-windows-msvc

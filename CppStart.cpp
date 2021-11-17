@@ -53,13 +53,17 @@ void signalHandler( int signum )
 }
 
 int main() {
+
     signal(SIGINT, signalHandler);
+
     cout<< Max(1,2)<< std::endl;
+
+#ifdef ELK
     char mem[200];
     struct js *js = js_create(mem, sizeof(mem));  // Create JS instance
     jsval_t v = js_eval(js, "1 + 2 * 3", ~0);     // Execute JS code
     printf("elk result: %s\n", js_str(js, v));        // result: 7
-
+#endif
 
     std::cout << "call RUST"<<addition(1,2) << std::endl;
 
@@ -77,9 +81,6 @@ int main() {
     std::cout << c->getVersion() << std::endl;
 
     delete c;
-    while (true){
-
-    }
     return 0;
 }
 

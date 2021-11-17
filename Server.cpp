@@ -13,6 +13,7 @@ string Server::getName() {
 }
 
 Server::Server() {
+
     this->name = "test Server";
     this->age = 20;
 }

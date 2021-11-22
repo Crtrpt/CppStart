@@ -18,7 +18,7 @@ add_library(Client SHARED Client.cpp log.h)
 add_library(ELK STATIC elk/elk.c)
 
 
-add_executable(CppStart CppStart.cpp StartAsm.asm)
+add_executable(CppStart CppStart.cpp StartAsm.asm Ev.cpp Ev.h)
 
 set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -DMY_DEBUG=Yes")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DMY_DEBUG=Yes")

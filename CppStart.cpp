@@ -99,9 +99,9 @@ int main() {
     std::cout << c->getVersion() << std::endl;
 
     delete c;
-    while (true){
-
-    }
+//    while (true){
+//
+//    }
     return 0;
 }
 

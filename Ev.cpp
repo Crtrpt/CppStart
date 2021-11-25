@@ -21,10 +21,13 @@ void Ev::off(int eventName) {
 
 void Ev::fire(int eventName) {
     void *callback=this->eventStart[eventName];
-    __asm
-    {
-        call callback
-    }
+
+    ((void(*)())callback)();
+
+//    __asm
+//    {
+//        call callback
+//    }
 }
 
 void Ev::init(int len) {
